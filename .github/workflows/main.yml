@@ -1,0 +1,20 @@
+name: cucumber
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: build
+        uses: actions/github-script@v6 
+        run: sleep 10
+
+      - name: trigger_test_workflows
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: run_tests

@@ -1,0 +1,13 @@
+name: test_1
+
+on:
+  repository_dispatch:
+    types: [run_tests]
+
+jobs:
+  test_1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: test
+        run: sleep 15

@@ -1,11 +1,11 @@
-name: test_1
+name: test_2
 
 on:
   repository_dispatch:
     types: [run_tests]
 
 jobs:
-  test_1:
+  test:
     runs-on: ubuntu-latest
 
     steps:

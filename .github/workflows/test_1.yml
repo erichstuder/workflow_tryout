@@ -5,7 +5,7 @@ on:
     types: [run_tests]
 
 jobs:
-  test_1:
+  test:
     runs-on: ubuntu-latest
 
     steps:
